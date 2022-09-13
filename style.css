@@ -30,6 +30,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: var(--backgroundColor);
 }
 
 .stop-scrolling {
@@ -37,8 +42,20 @@ body {
   overflow: hidden;
 }
 
-img {
-  width: 100%;
+.imgs{
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.imgs img{
+  max-width: 5.5rem;
+  padding: 0.4rem;
+}
+
+.right img {
+  min-width: inherit;
+  margin-bottom: -1.2rem;
 }
 
 a {
@@ -49,9 +66,9 @@ a {
   position: relative;
   padding: 1.7rem 0 2rem;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 90vh; */
   overflow: hidden;
-  background-color: var(--backgroundColor);
+  /* background-color: var(--backgroundColor); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -199,12 +216,13 @@ header .container {
   color: var(--darkOne);
   text-transform: capitalize;
   line-height: 1.4;
+  padding: 0.4rem 0;
 }
 
 .text {
   color: var(--lightOne);
   font-size: 1.1rem;
-  margin: 1.9rem 0 2.5rem;
+  margin: 0.9rem 0 2.0rem;
   max-width: 600px;
   line-height: 2.3;
 }
@@ -271,6 +289,18 @@ header .container {
   left: 0;
   z-index: 100;
   animation: appear 1s 1 both;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--mainColor);
+  color: var(--backgroundColor); */
+  padding: 0.9rem 0;
+  font-size: smaller;
+  /* z-index: 200; */
 }
 
 @keyframes appear {
@@ -374,6 +404,12 @@ header .container {
     bottom: -180px;
     left: -150px;
   }
+
+  .right img{
+    min-width: 100%;
+    /* margin-left: -3.2rem; */
+    margin-bottom: -5.2rem;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -391,5 +427,11 @@ header .container {
 
   .showcase-area .btn {
     font-size: 0.8rem;
+  }
+
+  .right img{
+    min-width: 150%;
+    margin-left: -4.2rem;
+    margin-bottom: -5.2rem;
   }
 }
