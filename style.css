@@ -42,15 +42,20 @@ body {
   overflow: hidden;
 }
 
-.imgs{
+.imgs {
   display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
 }
 
-.imgs img{
+.imgs img {
   max-width: 5.5rem;
   padding: 0.4rem;
+}
+
+.imgs img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .right img {
@@ -64,7 +69,7 @@ a {
 
 .big-wrapper {
   position: relative;
-  padding: 1.7rem 0 2rem;
+  padding: 0rem 0 2rem;
   width: 100%;
   /* min-height: 90vh; */
   overflow: hidden;
@@ -86,12 +91,13 @@ a {
 header {
   position: relative;
   z-index: 70;
+  margin-bottom: 0.9rem;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .overlay {
@@ -138,7 +144,7 @@ header .container {
   transition: 0.3s;
 }
 
-.btnDark{
+.btnDark {
   background-color: var(--darkTwo);
 }
 
@@ -222,7 +228,7 @@ header .container {
 .text {
   color: var(--lightOne);
   font-size: 1.1rem;
-  margin: 0.9rem 0 2.0rem;
+  margin: 0.9rem 0 2rem;
   max-width: 600px;
   line-height: 2.3;
 }
@@ -291,7 +297,7 @@ header .container {
   animation: appear 1s 1 both;
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -382,6 +388,22 @@ footer{
     grid-gap: 2rem;
   }
 
+  header {
+    padding-top: 0.9rem;
+  }
+
+  header .container {
+    align-items: center;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: flex-end;
+  }
+  .logo img {
+    margin: 0 auto;
+  }
+
   .big-title {
     font-size: 1.1rem;
   }
@@ -396,16 +418,16 @@ footer{
     transform: none;
   }
 
-  .logo h3 {
+  /* .logo h3 {
     font-size: 1.25rem;
   }
 
   .shape {
     bottom: -180px;
     left: -150px;
-  }
+  } */
 
-  .right img{
+  .right img {
     min-width: 100%;
     /* margin-left: -3.2rem; */
     margin-bottom: -5.2rem;
@@ -415,6 +437,23 @@ footer{
 @media screen and (max-width: 470px) {
   .container {
     padding: 0 1.5rem;
+  }
+
+  header {
+    padding-top: 0.9rem;
+  }
+
+  header .container {
+    align-items: center;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .logo img {
+    margin: 0 auto;
   }
 
   .big-title {
@@ -429,7 +468,7 @@ footer{
     font-size: 0.8rem;
   }
 
-  .right img{
+  .right img {
     min-width: 150%;
     margin-left: -4.2rem;
     margin-bottom: -5.2rem;
