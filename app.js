@@ -22,12 +22,19 @@ function toggleAnimation() {
   if (dark) {
     clone.classList.remove("light");
     clone.classList.add("dark");
+    
   } else {
     clone.classList.remove("dark");
     clone.classList.add("light");
+    
   }
   clone.classList.add("copy");
   main.appendChild(clone);
+
+  
+  // const logo = document.querySelector(".logo");
+  // logo.innerHTML = `<img src="./img/logo_white.png" alt="Logo" />`;
+  // document.getElementById("logo").src = "logo_white.png";
 
   document.body.classList.add("stop-scrolling");
 
